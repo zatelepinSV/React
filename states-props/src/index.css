@@ -20,10 +20,11 @@ code {
     monospace;
 }
 
-header {
+header, main {
   display: block;
-  width: 50%;
-  margin: 0 auto;
+  margin: auto;
+  width: 90%;
+  max-width: 50rem;
   text-align: center;
 }
 
@@ -48,4 +49,53 @@ header p {
   font-size: 1.25rem;
   color: #8964b0;
   font-family: "Roboto Condensed", sans-serif;
+}
+
+/*main {
+  width: 90%;
+  max-width: 50rem;
+  margin: auto;
+}*/
+
+#different-places {
+  padding: 2rem;
+  border-radius: 6px;
+  background-color: #140524;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+main h2 {
+  text-align: center;
+  font-family: "Roboto Condensed", sans-serif;
+  margin: 0 0 1.5rem 0;
+  color: #a18aba;
+}
+
+#different-places ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#different-places li {
+  width: 20rem;
+  text-align: center;
+}
+
+#different-places li img {
+  height: 6rem;
+  width: 8rem;
+  object-fit: cover;
+}
+
+#different-places li h3 {
+  margin: 0.5rem 0;
+}
+
+#different-places li p {
+  font-size: 0.9rem;
 }
