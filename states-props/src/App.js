@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./components/header/Header";
+import { DIFFERENT_PLACES } from "./components/data/Data";
 
-function App() {
+import './App.css';
+import DifferentPlaces from "./components/differentPlaces/DifferentPlaces";
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <main>
+        <section id='different-places'>
+          <h2>Several beautiful places</h2>
+          <ul>
+            {DIFFERENT_PLACES.map(place => <DifferentPlaces key={place.title} {...place}/>)}
+          </ul>
+        </section>
+      </main>
+    </>
   );
-}
+};
 
 export default App;
