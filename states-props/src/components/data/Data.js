@@ -7,17 +7,20 @@ import victoriaFalls from '../../assets/victoria-falls.jpg';
 export const DIFFERENT_PLACES = [
   {
     images: grandCanyon,
+    id: 1,
     title: 'Grand Canyon',
     description: 'Grand Canyon National Park, often called one of the Seven Natural Wonders of the World',
   },
   {
     images: tajMahal,
+    id: 2,
     title: 'Taj Mahal',
     description:
       'This white marble mausoleum is also known as the epitome of love and is renowned for its architectural beauty.',
   },
   {
     images: venetianCanals,
+    id: 3,
     title: 'Venetian Canals',
     description:
       'Venice, also known as the City of Canals, is known for its romantic waterways, historic architecture, ' +
@@ -25,6 +28,7 @@ export const DIFFERENT_PLACES = [
   },
   {
     images: victoriaFalls,
+    id: 4,
     title: 'Victoria Falls',
     description: 'Nothing compares to standing in front of the world’s largest waterfall',
   },

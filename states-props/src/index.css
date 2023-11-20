@@ -51,12 +51,6 @@ header p {
   font-family: "Roboto Condensed", sans-serif;
 }
 
-/*main {
-  width: 90%;
-  max-width: 50rem;
-  margin: auto;
-}*/
-
 #different-places {
   padding: 2rem;
   border-radius: 6px;
@@ -82,7 +76,7 @@ main h2 {
 }
 
 #different-places li {
-  width: 20rem;
+  width: 10rem;
   text-align: center;
 }
 
@@ -98,4 +92,20 @@ main h2 {
 
 #different-places li p {
   font-size: 0.9rem;
+}
+
+#selected-place {
+  margin: 3rem auto;
+}
+
+#selected-place h2 {
+  text-align: left;
+}
+
+#selected-place menu ul {
+  margin: 1rem 0;
+  padding: 0;
+  display: flex;
+  gap: 0.5rem;
+  list-style: none;
 }
