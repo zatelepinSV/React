@@ -2,7 +2,6 @@ import './index.css';
 
 
 const TabButton = ({ children, onSelect, isSelected }) => {
-  console.log(children)
 
   return (
     <li>

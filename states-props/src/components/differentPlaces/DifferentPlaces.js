@@ -1,12 +1,12 @@
 
 
-const DifferentPlaces = ({ images, title, description }) => {
+const DifferentPlaces = ({ images, title, shortDescription }) => {
 
   return (
     <li>
       <img src={images} alt={title} />
       <h3>{title}</h3>
-      <p>{description}</p>
+      <p>{shortDescription}</p>
     </li>
   );
 };

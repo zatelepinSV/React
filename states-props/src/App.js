@@ -12,10 +12,10 @@ const App = () => {
   let tabContent = <p>Please select a place</p>;
 
   if (typeof selectedPlace === "number") {
-    tabContent = (<div>
+    tabContent = (<div id="tab-content">
       <h3>{DIFFERENT_PLACES[selectedPlace].title}</h3>
       <img src={DIFFERENT_PLACES[selectedPlace].images} alt={DIFFERENT_PLACES[selectedPlace].title}/>
-      <p>{DIFFERENT_PLACES[selectedPlace].description}</p>
+      <p>{DIFFERENT_PLACES[selectedPlace].fullDescription}</p>
     </div>);
   }
 
@@ -37,7 +37,7 @@ const App = () => {
           <menu>
             <ul>
               {DIFFERENT_PLACES.map((place, index) => <TabButton
-                key={index}
+                key={place.id}
                 isSelected={index === selectedPlace}
                 onSelect={() => clickHandler(index)}
               >{place.title}</TabButton>)}
