@@ -4,6 +4,7 @@ import DifferentPlaces from "./components/differentPlaces/DifferentPlaces";
 import Header from "./components/header/Header";
 import TabButton from "./components/tabButton/TabButton";
 import './App.css';
+import TabContent from "./components/tabContent/TabContent";
 
 
 const App = () => {
@@ -12,13 +13,8 @@ const App = () => {
   let tabContent = <p>Please select a place</p>;
 
   if (typeof selectedPlace === "number") {
-    tabContent = (<div id="tab-content">
-      <h3>{DIFFERENT_PLACES[selectedPlace].title}</h3>
-      <img src={DIFFERENT_PLACES[selectedPlace].images} alt={DIFFERENT_PLACES[selectedPlace].title}/>
-      <p>{DIFFERENT_PLACES[selectedPlace].fullDescription}</p>
-    </div>);
+    tabContent = <TabContent {...DIFFERENT_PLACES[selectedPlace]} />;
   }
-
   const clickHandler = (selectedButton) => {
     setSelectedPlace(selectedButton);
   };
