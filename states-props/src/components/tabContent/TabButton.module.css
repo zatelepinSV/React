@@ -1,4 +1,4 @@
-#selected-place menu button {
+.content button {
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 6px;
@@ -10,12 +10,12 @@
     transition: all 0.2s ease-in-out;
 }
 
-#selected-place menu button:hover {
+.content button:hover {
     background-color: #1b082f;
     color: #ebe7ef;
 }
 
-#selected-place menu button.active {
+.content button.active {
     background-color: #7925d3;
     color: #ebe7ef;
 }

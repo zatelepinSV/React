@@ -1,10 +1,10 @@
 import temple from "../../assets/japanese-temple.jpg";
-
+import classes from "./Header.module.css";
 const Header = () => {
 
 
   return (
-    <header>
+    <header className={classes.content}>
       <img src={temple} alt="qwe"/>
       <h1>Beautiful places in the world</h1>
       <p>

@@ -9,5 +9,4 @@ const TabContent = ({title, images, fullDescription}) => {
   );
 };
 
-
 export default TabContent;
