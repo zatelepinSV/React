@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { DIFFERENT_PLACES } from "../data/Data";
 import TabButton from "../tabContent/TabButton";
 import TabContent from "../tabContent/TabContent";
@@ -13,9 +13,9 @@ const SelectedPlace = () => {
   if (typeof selectedPlace === "number") {
     tabContent = <TabContent {...DIFFERENT_PLACES[selectedPlace]} />;
   }
-  const clickHandler = (selectedButton) => {
+  const onPlaceClick = useCallback(selectedButton => {
     setSelectedPlace(selectedButton);
-  };
+  },[selectedPlace]);
 
   return (
     <section className={classes.selected}>
@@ -24,7 +24,7 @@ const SelectedPlace = () => {
           {DIFFERENT_PLACES.map((place, index) => <TabButton
             key={place.id}
             isSelected={index === selectedPlace}
-            onSelect={() => clickHandler(index)}
+            onSelect={() => onPlaceClick(index)}
           >{place.title}</TabButton>)}
         </ul>
       </menu>
