@@ -33,5 +33,4 @@ const SelectedPlace = () => {
   );
 };
 
-
 export default SelectedPlace;
