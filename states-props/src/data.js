@@ -1,7 +1,7 @@
-import grandCanyon from '../../assets/grand-canyon.jpg';
-import tajMahal from '../../assets/taj-mahal.jpg';
-import venetianCanals from '../../assets/venetian-canals.jpg';
-import victoriaFalls from '../../assets/victoria-falls.jpg';
+import grandCanyon from './assets/grand-canyon.jpg';
+import tajMahal from './assets/taj-mahal.jpg';
+import venetianCanals from './assets/venetian-canals.jpg';
+import victoriaFalls from './assets/victoria-falls.jpg';
 
 
 export const DIFFERENT_PLACES = [

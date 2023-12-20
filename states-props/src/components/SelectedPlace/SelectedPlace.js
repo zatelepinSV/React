@@ -1,21 +1,18 @@
 import { useState, useCallback } from "react";
-import { DIFFERENT_PLACES } from "../data/Data";
-import TabButton from "../tabContent/TabButton";
-import TabContent from "../tabContent/TabContent";
+import { DIFFERENT_PLACES } from "../../data";
+import TabButton from "../TabContent/TabButton";
+import TabContent from "../TabContent/TabContent";
 import classes from "./SelectPlace.module.css";
 
 const SelectedPlace = () => {
 
   const [selectedPlace, setSelectedPlace] = useState('');
 
-  let tabContent = <p>Please select a place</p>;
+  const hasSelectedPlace = typeof selectedPlace === "number";
 
-  if (typeof selectedPlace === "number") {
-    tabContent = <TabContent {...DIFFERENT_PLACES[selectedPlace]} />;
-  }
   const onPlaceClick = useCallback(selectedButton => {
     setSelectedPlace(selectedButton);
-  },[selectedPlace]);
+  },[]);
 
   return (
     <section className={classes.selected}>
@@ -28,7 +25,11 @@ const SelectedPlace = () => {
           >{place.title}</TabButton>)}
         </ul>
       </menu>
-      {tabContent}
+      {hasSelectedPlace ? (
+        <TabContent {...DIFFERENT_PLACES[selectedPlace]} />
+      ) : (
+        <p>Please select a place</p>
+      )}
     </section>
   );
 };

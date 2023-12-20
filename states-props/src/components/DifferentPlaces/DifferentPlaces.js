@@ -1,4 +1,4 @@
-import { DIFFERENT_PLACES } from "../data/Data";
+import { DIFFERENT_PLACES } from "../../data";
 import PlaceContent from "./PlaceContent";
 import classes from "./DifferentPlaces.module.css";
 

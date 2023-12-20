@@ -1,7 +1,6 @@
-import DifferentPlaces from "./components/differentPlaces/DifferentPlaces";
-import SelectedPlace from "./components/selectedPlace/SelectedPlace";
-import Header from "./components/header/Header";
-import './App.css';
+import DifferentPlaces from "./components/DifferentPlaces/DifferentPlaces";
+import SelectedPlace from "./components/SelectedPlace/SelectedPlace";
+import Header from "./components/Header/Header";
 
 
 const App = () => (
